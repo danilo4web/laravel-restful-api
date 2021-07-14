@@ -1,0 +1,13 @@
+version: "3"
+services:
+  mysqldb:
+    image: mariadb:latest
+    container_name: e_petitions__mariadb
+    command: ["--default-authentication-plugin=mysql_native_password"]
+    ports:
+        - "33061:3306"
+    environment:
+        MYSQL_ROOT_PASSWORD: 'e_petitions'
+        MYSQL_DATABASE: 'e_petitions_db'
+        MYSQL_USER: 'e_petitions_user'
+        MYSQL_PASSWORD: 'e_petitions_pass'
