@@ -25,7 +25,7 @@ php artisan make:resource PetitionResource
 php artisan make:resource PetitionCollection
 ```
 
-####Dependencies:
+#### Dependencies:
 ```
 composer require doctrine/dbal
 ```
