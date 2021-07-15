@@ -50,6 +50,51 @@ php artisan db:seed
 php artisan db:seed --class=PetitionSeeder
 ```
 
+#### List API routes:
+```
+php artisan route:list
+```
+<hr /> 
+
+### ROUTES API
+
+#### GET petitions
+```
+GET http://127.0.0.1:8000/api/petitions
+```
+
+#### GET a petition
+```
+GET http://127.0.0.1:8000/api/petitions/{id}
+```
+
+#### CREATE a petition
+```
+POST http://127.0.0.1:8000/api/petitions
+{
+    "title": "My Petition",
+    "category": "nature",
+    "description": "A new petition description",
+    "author": "Danilo",
+    "signees": 1003
+}
+```
+
+#### UPDATE a petition
+```
+PUT http://127.0.0.1:8000/api/petitions/{id}
+{
+    "title": "Hello 2000 - UPDATED",
+    "category": "Petition category",
+    "description": "A new petition ipsum ipsum",
+    "signees": 1003
+}
+```
+
+#### DELETE a petition
+```
+DELETE http://127.0.0.1:8000/api/petitions/{id}
+```
 
 ### Laravel 8.x Documentation:
 [https://laravel.com/docs/8.x](https://laravel.com/docs/8.x)

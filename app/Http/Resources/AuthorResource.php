@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class PetitionResource extends JsonResource
+class AuthorResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,11 +16,7 @@ class PetitionResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'title' => ucwords($this->title),
-            'description' => $this->description,
-            'category' => $this->category,
-            'author' => $this->author,
-            'signees' => $this->signees,
+            'name' => $this->name,
         ];
     }
 }
